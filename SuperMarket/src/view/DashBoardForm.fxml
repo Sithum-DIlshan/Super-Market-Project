@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <AnchorPane prefHeight="77.0" prefWidth="375.0" style="-fx-background-color: #34495e;">
+         <children>
+            <ImageView fx:id="imageuser" fitHeight="64.0" fitWidth="27.0" layoutX="69.0" layoutY="36.0" onMousePressed="#handleButtonOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/user.png" />
+               </image>
+            </ImageView>
+               <ImageView fx:id="imageadmin" fitHeight="64.0" fitWidth="27.0" layoutX="274.0" layoutY="36.0" onMousePressed="#handleButtonOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/admin.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="58.0" layoutY="14.0" text="Cashier" textFill="#d6d6d6" />
+            <Label layoutX="263.0" layoutY="14.0" text="Admin" textFill="#d6d6d6" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="admin" layoutX="13.0" layoutY="75.0" prefHeight="386.0" prefWidth="375.0" style="-fx-background-color: #34495e;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <Label layoutX="15.0" layoutY="56.0" text="User Name" textFill="#f2f2f2">
+               <font>
+                  <Font name="Waree Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="151.0" text="Password" textFill="#f2f2f2">
+               <font>
+                  <Font name="Waree Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="adminUsrName" layoutX="154.0" layoutY="56.0" prefHeight="26.0" prefWidth="206.0" promptText="User Name" style="-fx-background-color: #ffff;" />
+            <JFXButton layoutX="246.0" layoutY="251.0" onAction="#adminLoginOnAction" prefHeight="27.0" prefWidth="105.0" style="-fx-background-color: #6ccf21; -fx-background-radius: 5px;" text="Login" />
+            <ImageView fitHeight="16.0" fitWidth="27.0" layoutX="282.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+               <image>
+                  <Image url="@../assests/icons8-arrow-24.png" />
+               </image>
+            </ImageView>
+            <JFXPasswordField fx:id="adminPsswrd" layoutX="154.0" layoutY="151.0" prefHeight="26.0" prefWidth="206.0" promptText="Password" style="-fx-background-color: #ffff;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="user" layoutX="13.0" layoutY="117.0" prefHeight="344.0" prefWidth="375.0" style="-fx-background-color: #34495e;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <Label layoutX="27.0" layoutY="58.0" text="User Name" textFill="#f2f2f2">
+               <font>
+                  <Font name="Waree Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="151.0" text="Password" textFill="#f2f2f2">
+               <font>
+                  <Font name="Waree Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="cashierUsrName" layoutX="152.0" layoutY="58.0" prefHeight="26.0" prefWidth="206.0" promptText="User Name" style="-fx-background-color: #ffff;" />
+            <JFXButton layoutX="255.0" layoutY="246.0" onAction="#cashierLoginOnAction" prefHeight="27.0" prefWidth="105.0" style="-fx-background-color: #6ccf21; -fx-background-radius: 5px;" text="Login" />
+            <ImageView fitHeight="16.0" fitWidth="27.0" layoutX="76.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+               <image>
+                  <Image url="@../assests/icons8-arrow-24.png" />
+               </image>
+            </ImageView>
+            <JFXPasswordField fx:id="cashierPsswrd" layoutX="152.0" layoutY="151.0" prefHeight="26.0" prefWidth="206.0" promptText="Password" style="-fx-background-color: #ffff;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
